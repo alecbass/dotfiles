@@ -1,0 +1,12 @@
+# Ignore all files and directories
+*
+
+# Except for these ones
+!.git*
+!ghostty
+!ghostty/**
+!hypr
+!hypr/**
+!nvim
+!nvim/**
+!init.lua
