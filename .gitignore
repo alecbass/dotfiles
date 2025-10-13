@@ -10,3 +10,4 @@
 !nvim
 !nvim/**
 !init.lua
+!make-symlinks.sh
