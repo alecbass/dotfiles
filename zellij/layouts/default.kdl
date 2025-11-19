@@ -1,0 +1,28 @@
+layout {
+    default_tab_template {
+        // Show the tab bar
+        pane size=1 borderless=true {
+            plugin location="zellij:tab-bar"
+            // plugin location="zellij:strider"
+            // plugin location="zellij:session-manager"
+            // plugin location="zellij:compact-bar"
+        }
+        children
+        pane size=1 borderless=true {
+            plugin location="zellij:status-bar"
+        }
+    }
+
+    tab name="editor" focus=true {
+        pane name="Editor" borderless=false
+    }
+    tab name="cli" {
+        pane split_direction="vertical" {
+            pane name="Deps" borderless=false
+            pane name="CLI" borderless=false
+        }
+    }
+    tab name="db" {
+        pane name="DB" borderless=false
+    }
+}
