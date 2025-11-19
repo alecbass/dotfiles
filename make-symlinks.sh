@@ -15,7 +15,3 @@ for dir in "${dirs[@]}"; do
         ln -s "$dotfiles_dir" "$config_dir"
     fi
 done
-
-# ln -s "$HOME/Documents/dotfiles/ghostty" "$HOME/.config/ghostty"
-# ln -s "$HOME/Documents/dotfiles/hypr" "$HOME/.config/hypr"
-# ln -s "$HOME/Documents/dotfiles/zellij" "$HOME/.config/zellij"
