@@ -18,8 +18,8 @@ layout {
     }
     tab name="2) CLI" {
         pane split_direction="vertical" {
-            pane name="Deps" borderless=false
             pane name="CLI" borderless=false
+            pane name="Deps" borderless=false
         }
     }
     tab name="3) DB" {
