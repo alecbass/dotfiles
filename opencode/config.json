@@ -21,8 +21,12 @@
   },
   "permission": {
     "*": "ask",
+    "read": "allow",
+    "glob": "allow",
     "bash": {
       "*": "ask",
+      "grep *": "allow",
+      "find *": "allow",
       "touch *": "ask",
       "mkdir *": "ask",
       "rm *": "ask",
@@ -36,6 +40,10 @@
       "wget *": "ask",
       "npm install *": "ask",
       "pip install *": "ask",
+      "git branch *": "allow",
+      "git status *": "allow",
+      "git log *": "allow",
+      "git show *": "allow",
       "git push": "ask",
       "git reset --hard *": "ask",
       "git clean *": "ask",
