@@ -23,6 +23,7 @@
     "*": "ask",
     "read": "allow",
     "glob": "allow",
+    "grep": "allow",
     "bash": {
       "*": "ask",
       "grep *": "allow",
