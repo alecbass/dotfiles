@@ -4,14 +4,15 @@ dirs=(
     "ghostty"
     "hypr"
     "zellij"
+    "opencode"
 )
 
 for dir in "${dirs[@]}"; do
-    dotfiles_dir="$HOME/Documents/dotfiles/$dir"
+    dotfiles_dir="$HOME/repos/dotfiles/$dir"
     config_dir="$HOME/.config/$dir"
 
     if [ ! -d "$config_dir" ]; then
-        "$HOME/Documents/dotfiles/ghostty"
+        "$HOME/repos/dotfiles/ghostty"
         ln -s "$dotfiles_dir" "$config_dir"
     fi
 done

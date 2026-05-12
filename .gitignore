@@ -11,5 +11,7 @@
 !nvim/**
 !zellij
 !zellij/**
+!opencode
+!opencode/**
 !init.lua
 !make-symlinks.sh
