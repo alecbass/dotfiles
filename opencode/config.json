@@ -44,6 +44,7 @@
       "pip install *": "ask",
       "git branch *": "allow",
       "git status *": "allow",
+      "git diff *": "allow",
       "git log *": "allow",
       "git show *": "allow",
       "git push": "ask",
