@@ -12,7 +12,6 @@ for dir in "${dirs[@]}"; do
     config_dir="$HOME/.config/$dir"
 
     if [ ! -d "$config_dir" ]; then
-        "$HOME/repos/dotfiles/ghostty"
         ln -s "$dotfiles_dir" "$config_dir"
     fi
 done

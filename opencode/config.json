@@ -28,6 +28,7 @@
       "*": "ask",
       "grep *": "allow",
       "find *": "allow",
+      "ls *": "allow",
       "touch *": "ask",
       "mkdir *": "ask",
       "rm *": "ask",
