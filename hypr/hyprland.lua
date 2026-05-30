@@ -17,19 +17,19 @@
 -- See https://wiki.hyprland.org/Configuring/Basics/Monitors/
 -- Put the small monitor to the left of the right
 
-# Home desktop
+-- Home desktop
 hl.monitor({
     output   = "HDMI-A-1",
     mode     = "preferred",
     position = "auto",
     scale    = 1,
 })
-hl.monitor({
-    output   = "DP-1",
-    mode     = "1680x1050",
-    position = "-1680x575",
-    scale    = 1,
-})
+-- hl.monitor({
+--     output   = "DP-1",
+--     mode     = "1680x1050",
+--     position = "-1680x575",
+--     scale    = 1,
+-- })
 
 -- Dad's house
 hl.monitor({
@@ -63,13 +63,13 @@ local menu = "wofi --show drun"
 -- Autostart necessary processes (like notifications daemons, status bars, etc.)
 -- Or execute your favorite apps at launch like this:
 hl.on("hyprland.start", function ()
-  hl.exec_cmd("nm-applet")
-  hl.exec_cmd("hyprpanel")
-  hl.exec_cmd("hypridle")
-  hl.exec_cmd("swww-daemon")
-  hl.exec_cmd("waybar")
-  hl.exec_cmd(browser)
-  hl.exec_cmd('hyprpaper & "$HOME/.config/hypr/wallpaper.sh"')
+    hl.exec_cmd("nm-applet")
+    hl.exec_cmd("hyprpanel")
+    hl.exec_cmd("hypridle")
+    hl.exec_cmd("swww-daemon")
+    hl.exec_cmd("waybar")
+    hl.exec_cmd(browser)
+    hl.exec_cmd('hyprpaper & "$HOME/.config/hypr/wallpaper.sh"')
 end)
 
 
@@ -276,14 +276,14 @@ local mainMod = "SUPER" -- Sets "Windows" key as main modifier
 hl.bind(mainMod .. " + Q", hl.dsp.exec_cmd(terminal))
 hl.bind(mainMod .. " + C", hl.dsp.window.close())
 hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
-hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
+hl.bind(mainMod .. " + F", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))    -- dwindle only
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(browser))
 hl.bind(mainMod .. " + S", hl.dsp.exec_cmd("slack"))
-hl.bind(mainMod .. " + SD", hl.dsp.exec_cmd("discord"))
+hl.bind(mainMod .. " + D", hl.dsp.exec_cmd("discord"))
 
 -- Move focus with mainMod + arrow keys
 hl.bind(mainMod .. " + left",  hl.dsp.focus({ direction = "left" }))
@@ -309,10 +309,10 @@ hl.bind(mainMod .. " + mouse_up",   hl.dsp.focus({ workspace = "e-1" }))
 
 -- Move/resize windows with mainMod + LMB/RMB and dragging
 hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag(),   { mouse = true })
-hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true }
+hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
 
 -- Take screenshots and copy the latest one to the clipboard
-local grimScreenshotCommand = 'grim -g "$(slurp -w 0)" "$HOME/Pictures/Screenshots/$(date +'%s_grim.png')" && wl-copy < "$HOME/Pictures/Screenshots/$(ls -Art "$HOME/Pictures/Screenshots" | tail -n 1)"'
+local grimScreenshotCommand = [[grim -g "$(slurp -w 0)" "$HOME/Pictures/Screenshots/$(date +'%s_grim.png')" && wl-copy < "$HOME/Pictures/Screenshots/$(ls -Art "$HOME/Pictures/Screenshots" | tail -n 1)"]]
 hl.bind("Print", hl.dsp.exec_cmd(grimScreenshotCommand))
 
 -- Move/resize windows with mainMod + LMB/RMB and dragging
@@ -333,27 +333,6 @@ hl.bind("XF86AudioPause", hl.dsp.exec_cmd("playerctl play-pause"), { locked = tr
 hl.bind("XF86AudioPlay",  hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
 hl.bind("XF86AudioPrev",  hl.dsp.exec_cmd("playerctl previous"),   { locked = true })
 
-------------------------------
---- WINDOWS AND WORKSPACES ---
-------------------------------
-
--- # See https://wiki.hyprland.org/Configuring/Window-Rules/ for more
--- # See https://wiki.hyprland.org/Configuring/Workspace-Rules/ for workspace rules
---
--- # Example windowrule v1
--- # windowrule = float, ^(kitty)$
---
--- # Example windowrule v2
--- # windowrulev2 = float,class:^(kitty)$,title:^(kitty)$
---
--- # Ignore maximize requests from apps. You'll probably like this.
--- # TODO(alec): Use Lua - was windowrulev2
--- # hl.window_rule = ({ suppressevent maximize, class:.*
---
--- # Fix some dragging issues with XWayland
--- # TODO(alec): Use Lua
--- # windowrulev2 = nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0
---
 --------------------------------
 ---- WINDOWS AND WORKSPACES ----
 --------------------------------
