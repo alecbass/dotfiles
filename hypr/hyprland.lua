@@ -32,18 +32,18 @@ hl.monitor({
 -- })
 
 -- Dad's house
-hl.monitor({
-    output   = "HDMI-A-1",
-    mode     = "preferred",
-    position = "-1680x0",
-    scale    = 1,
-})
-hl.monitor({
-    output   = "eDP-1",
-    mode     = "1680x1050",
-    position = "auto",
-    scale    = 1,
-})
+-- hl.monitor({
+--     output   = "HDMI-A-1",
+--     mode     = "preferred",
+--     position = "-1680x0",
+--     scale    = 1,
+-- })
+-- hl.monitor({
+--     output   = "eDP-1",
+--     mode     = "1680x1050",
+--     position = "auto",
+--     scale    = 1,
+-- })
 
 -------------------
 --- MY PROGRAMS ---
@@ -66,10 +66,10 @@ hl.on("hyprland.start", function ()
     hl.exec_cmd("nm-applet")
     hl.exec_cmd("hyprpanel")
     hl.exec_cmd("hypridle")
+    hl.exec_cmd("hyprpaper")
     hl.exec_cmd("swww-daemon")
     hl.exec_cmd("waybar")
     hl.exec_cmd(browser)
-    hl.exec_cmd('hyprpaper & "$HOME/.config/hypr/wallpaper.sh"')
 end)
 
 
