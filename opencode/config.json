@@ -26,9 +26,11 @@
     "grep": "allow",
     "bash": {
       "*": "ask",
+
+      // Linux
+      "ls *": "allow",
       "grep *": "allow",
       "find *": "allow",
-      "ls *": "allow",
       "touch *": "ask",
       "mkdir *": "ask",
       "rm *": "ask",
@@ -40,16 +42,7 @@
       "chown *": "ask",
       "curl *": "ask",
       "wget *": "ask",
-      "npm install *": "ask",
       "pip install *": "ask",
-      "git branch *": "allow",
-      "git status *": "allow",
-      "git diff *": "allow",
-      "git log *": "allow",
-      "git show *": "allow",
-      "git push": "ask",
-      "git reset --hard *": "ask",
-      "git clean *": "ask",
       "reboot": "ask",
       "shutdown": "ask",
       "kill *": "ask",
@@ -59,15 +52,31 @@
       "fdisk *": "ask",
       "parted *": "ask",
       "format *": "ask",
-      "git branch -d *": "ask",
-      "git branch -D *": "ask",
-      "git rebase *": "ask",
-      "npm run publish": "ask",
       "brew install *": "ask",
       "brew upgrade *": "ask",
       "ssh *": "ask",
       "scp *": "ask",
-      "rsync *": "ask"
+      "rsync *": "ask",
+
+      // Git
+      "git branch *": "allow",
+      "git status *": "allow",
+      "git log *": "allow",
+      "git show *": "allow",
+      "git merge-base *": "allow",
+      "git push": "ask",
+      "git reset --hard *": "ask",
+      "git clean *": "ask",
+      "git branch -d *": "ask",
+      "git branch -D *": "ask",
+      "git rebase *": "ask",
+
+      // Rust
+      "cargo check *": "allow",
+
+      // JS
+      "npm install *": "ask",
+      "npm run publish": "ask",
     },
     "doom_loop": "ask",
     "external_directory": "ask"
