@@ -1,5 +1,0 @@
-@import "~/.config/rofi/config-long.rasi"
-entry {
-  width: 45%;
-  placeholder: "🔎 Search Emoji's 👀";
-}
