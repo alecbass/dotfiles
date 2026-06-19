@@ -11,6 +11,8 @@
 !nvim/**
 !zellij
 !zellij/**
+!prettier
+!prettier/**
 !opencode
 !opencode/**
 !init.lua
