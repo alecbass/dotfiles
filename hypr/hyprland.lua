@@ -53,7 +53,7 @@ hl.monitor({
 local terminal = "ghostty"
 local fileManager = "dolphin"
 local browser = "google-chrome-stable"
-local menu = "wofi --show drun"
+local menu = "rofi-launcher"
 
 
 -----------------
