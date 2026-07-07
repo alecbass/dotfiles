@@ -53,7 +53,8 @@ hl.monitor({
 local terminal = "ghostty"
 local fileManager = "dolphin"
 local browser = "google-chrome-stable"
-local menu = "wofi --show drun"
+local menu = "rofi-launcher"
+local logout = "wlogout"
 
 
 -----------------
@@ -279,6 +280,7 @@ hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2
 hl.bind(mainMod .. " + F", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(menu))
+hl.bind(mainMod .. " + L", hl.dsp.exec_cmd(logout))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))    -- dwindle only
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(browser))

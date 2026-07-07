@@ -5,6 +5,8 @@ dirs=(
     "hypr"
     "zellij"
     "opencode"
+    "prettier"
+    "rofi"
 )
 
 for dir in "${dirs[@]}"; do

@@ -1,0 +1,4 @@
+/** Tokyonight overrides */
+window {
+    location: center;
+}
