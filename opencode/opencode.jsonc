@@ -29,6 +29,7 @@
 
       // Linux
       "ls *": "allow",
+      "cat *": "allow",
       "grep *": "allow",
       "find *": "allow",
       "touch *": "ask",
