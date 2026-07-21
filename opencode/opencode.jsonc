@@ -32,6 +32,8 @@
       "cat *": "allow",
       "grep *": "allow",
       "find *": "allow",
+      "head *": "allow",
+      "tail *": "allow",
       "touch *": "ask",
       "mkdir *": "ask",
       "rm *": "ask",
