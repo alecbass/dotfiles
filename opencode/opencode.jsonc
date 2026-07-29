@@ -37,6 +37,7 @@
       "head *": "allow",
       "tail *": "allow",
       "rg *": "allow",
+      "sed *": "allow",
       "touch *": "ask",
       "mkdir *": "ask",
       "rm *": "ask",
