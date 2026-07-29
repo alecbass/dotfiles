@@ -19,6 +19,7 @@
       }
     }
   },
+  "shell": "bash",
   "permission": {
     "*": "ask",
     "read": "allow",
@@ -84,6 +85,7 @@
       // JS
       "npm install *": "ask",
       "npm run publish": "ask",
+      "pnpm vitest *": "allow"
     },
     "doom_loop": "ask",
     "external_directory": "ask"
