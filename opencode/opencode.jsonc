@@ -25,6 +25,7 @@
     "read": "allow",
     "glob": "allow",
     "grep": "allow",
+    "edit": "ask",
     "bash": {
       "*": "ask",
 
