@@ -27,6 +27,7 @@
     "grep": "allow",
     "edit": "ask",
     "webfetch": "allow",
+    "skill": "allow",
     "bash": {
       "*": "ask",
 
