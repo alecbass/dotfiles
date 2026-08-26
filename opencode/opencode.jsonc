@@ -88,6 +88,9 @@
       "git branch -D *": "ask",
       "git rebase *": "ask",
 
+      // GitHub
+      "gh *": "deny",
+
       // Rust
       "cargo check *": "allow",
 
