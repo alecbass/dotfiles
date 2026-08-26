@@ -26,6 +26,7 @@
     "glob": "allow",
     "grep": "allow",
     "edit": "ask",
+    "webfetch": "allow",
     "bash": {
       "*": "ask",
 
