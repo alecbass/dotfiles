@@ -22,7 +22,12 @@
   "shell": "bash",
   "permission": {
     "*": "ask",
-    "read": "allow",
+    "read": {
+      "*": "allow",
+      "*.env": "deny",
+      "*.env.*": "deny",
+      "*.env.local": "allow"
+    }, 
     "glob": "allow",
     "grep": "allow",
     "edit": "ask",
