@@ -66,6 +66,7 @@
       "git clean *": "ask",
       "git branch -d *": "ask",
       "git branch -D *": "ask",
+      "git merge *": "ask",
       "git rebase *": "ask",
 
       // GitHub
