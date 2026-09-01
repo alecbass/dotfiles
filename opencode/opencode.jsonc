@@ -25,6 +25,7 @@
       "tail *": "allow",
       "rg *": "allow",
       "sed *": "allow",
+      "wc *": "allow",
       "touch *": "ask",
       "mkdir *": "ask",
       "rm *": "ask",
