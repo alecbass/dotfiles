@@ -38,8 +38,6 @@
       "curl *": "ask",
       "wget *": "ask",
       "pip install *": "ask",
-      "reboot": "ask",
-      "shutdown": "ask",
       "kill *": "ask",
       "killall *": "ask",
       "docker *": "ask",
@@ -52,6 +50,8 @@
       "ssh *": "ask",
       "scp *": "ask",
       "rsync *": "ask",
+      "reboot": "deny",
+      "shutdown": "deny",
 
       // Git
       "git branch *": "allow",
