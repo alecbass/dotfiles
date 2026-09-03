@@ -62,6 +62,7 @@
       "git diff *": "allow",
       "git remote *": "allow",
       "git rev-parse *": "allow",
+      "git grep *": "allow",
       "git push": "ask",
       "git reset --hard *": "ask",
       "git clean *": "ask",
