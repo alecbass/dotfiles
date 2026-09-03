@@ -11,27 +11,21 @@ layout {
     }
 
     tab name="Backend Run" focus=true {
-        pane name="Oktowai" borderless=false
-    }
-    tab name="Frontend Run" {
-        pane name="Oktowai AI" borderless=false
+        pane name="Backend" borderless=false
     }
     tab name="Backend" {
-        pane name="Oktowai AI" borderless=false
+        pane name="Backend" borderless=false
     }
     tab name="Backend AI" {
-        pane name="Frontend" borderless=false
+        pane name="Backend AI" borderless=false
     }
-    tab name="Backend AI 2" {
-        pane name="Frontend AI" borderless=false
+    tab name="Frontend Run" {
+        pane name="Frontend Run" borderless=false
     }
     tab name="Frontend" {
         pane name="Frontend" borderless=false
     }
     tab name="Frontend AI" {
         pane name="Frontend AI" borderless=false
-    }
-    tab name="Frontend AI 2" {
-        pane name="Oktowai" borderless=false
     }
 }
