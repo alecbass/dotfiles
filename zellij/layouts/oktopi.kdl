@@ -20,7 +20,7 @@ layout {
         pane name="Backend AI" borderless=false
     }
     tab name="Frontend Run" cwd="./repos/frontend" {
-        pane name="Frontend Run" borderless=false {
+        pane name="Frontend Run" borderless=false
     }
     tab name="Frontend" cwd="./repos/frontend" {
         pane name="Frontend" borderless=false
