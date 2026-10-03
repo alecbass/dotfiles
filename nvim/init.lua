@@ -1,3 +1,1 @@
 require("alecbass")
-
-a
