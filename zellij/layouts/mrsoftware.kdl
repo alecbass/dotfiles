@@ -13,7 +13,16 @@ layout {
         }
     }
 
-    tab name="1) Base" focus=true {
+    tab name="1) Editor" focus=true {
         pane name="Editor" borderless=false
+    }
+    tab name="2) CLI" {
+        pane split_direction="vertical" {
+            pane name="CLI" borderless=false
+            pane name="Deps" borderless=false
+        }
+    }
+    tab name="3) DB" {
+        pane name="DB" borderless=false
     }
 }
