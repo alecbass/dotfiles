@@ -7,6 +7,7 @@ dirs=(
     "opencode"
     "prettier"
     "rofi"
+    "nvim"
 )
 
 for dir in "${dirs[@]}"; do
