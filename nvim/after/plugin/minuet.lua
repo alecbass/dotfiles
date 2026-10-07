@@ -24,7 +24,7 @@ require("minuet").setup({
 			"cpp",
 			"csharp",
 			"cs",
-            "razor",
+			"razor",
 			"nix",
 		},
 		keymap = {
@@ -65,69 +65,69 @@ require("minuet").setup({
 	--
 	-- llama.cpp
 	--
-	provider = "openai_fim_compatible",
-	provider_options = {
-		openai_fim_compatible = {
-			-- For Windows users, TERM may not be present in environment variables.
-			-- Consider using APPDATA instead.
-			api_key = "TERM",
-			name = "Llama.cpp",
-			end_point = "http://localhost:8012/v1/completions",
-			-- The model is set by the llama-cpp server and cannot be altered
-			-- post-launch.
-			model = "PLACEHOLDER",
-			optional = {
-				max_tokens = 128, -- 56,
-				top_p = 0.9,
-			},
-			-- Llama.cpp does not support the `suffix` option in FIM completion.
-			-- Therefore, we must disable it and manually populate the special
-			-- tokens required for FIM completion.
-			template = {
-				prompt = function(context_before_cursor, context_after_cursor, _)
-					return "<|fim_prefix|>"
-						.. context_before_cursor
-						.. "<|fim_suffix|>"
-						.. context_after_cursor
-						.. "<|fim_middle|>"
-				end,
-				suffix = false,
-			},
-			transform = {},
-		},
-	},
+	-- provider = "openai_fim_compatible",
+	-- provider_options = {
+	-- 	openai_fim_compatible = {
+	-- 		-- For Windows users, TERM may not be present in environment variables.
+	-- 		-- Consider using APPDATA instead.
+	-- 		api_key = "TERM",
+	-- 		name = "Llama.cpp",
+	-- 		end_point = "http://localhost:8012/v1/completions",
+	-- 		-- The model is set by the llama-cpp server and cannot be altered
+	-- 		-- post-launch.
+	-- 		model = "PLACEHOLDER",
+	-- 		optional = {
+	-- 			max_tokens = 128, -- 56,
+	-- 			top_p = 0.9,
+	-- 		},
+	-- 		-- Llama.cpp does not support the `suffix` option in FIM completion.
+	-- 		-- Therefore, we must disable it and manually populate the special
+	-- 		-- tokens required for FIM completion.
+	-- 		template = {
+	-- 			prompt = function(context_before_cursor, context_after_cursor, _)
+	-- 				return "<|fim_prefix|>"
+	-- 					.. context_before_cursor
+	-- 					.. "<|fim_suffix|>"
+	-- 					.. context_after_cursor
+	-- 					.. "<|fim_middle|>"
+	-- 			end,
+	-- 			suffix = false,
+	-- 		},
+	-- 		transform = {},
+	-- 	},
+	-- },
 
 	--
 	-- Opencode
 	--
-	-- provider = "openai_compatible",
-	-- request_timeout = 2.5,
-	-- throttle = 1500, -- Increase to reduce costs and avoid rate limits
-	-- debounce = 600, -- Increase to reduce costs and avoid rate limits
-	-- provider_options = {
-	-- 	openai_compatible = {
-	-- 		api_key = function()
-	-- 			return os.getenv("OPENCODE_GO_API_KEY")
-	-- 		end,
-	-- 		end_point = "https://opencode.ai/zen/go/v1/chat/completions",
-	-- 		-- model = "glm-5.3",
-	-- 		-- model = "deepseek-v4-flash",
-	-- 		model = "kimi-k2.7-code",
-	-- 		name = "Opencode",
-	-- 		optional = {
-	-- 			max_tokens = 56,
-	-- 			-- top_p = 0.9,
-	--                top_p = 0.95,
-	-- 			-- disable thinking to avoid first token latency
-	-- 			thinking = { type = "enabled" },
-	-- 		},
-	-- 		-- Custom HTTP headers must go through `transform`; `optional` is request body only
-	-- 		transform = {
-	-- 			function(args)
-	-- 				args.headers["x-opencode-session"] = "nvim"
-	-- 				return args
-	-- 			end,
-	-- 		},
-	-- 	},
-	-- },
+	provider = "openai_compatible",
+	request_timeout = 2.5,
+	throttle = 1500, -- Increase to reduce costs and avoid rate limits
+	debounce = 600, -- Increase to reduce costs and avoid rate limits
+	provider_options = {
+		openai_compatible = {
+			api_key = function()
+				return os.getenv("OPENCODE_GO_API_KEY")
+			end,
+			end_point = "https://opencode.ai/zen/go/v1/chat/completions",
+			model = "glm-5.3-flash",
+			-- model = "deepseek-v4.1-flash",
+			-- model = "kimi-k2.7-code",
+			name = "Opencode",
+			optional = {
+				max_tokens = 56,
+				-- top_p = 0.9,
+				top_p = 0.95,
+				-- disable thinking to avoid first token latency
+				-- thinking = { type = "enabled" },
+			},
+			-- Custom HTTP headers must go through `transform`; `optional` is request body only
+			transform = {
+				function(args)
+					args.headers["x-opencode-session"] = "nvim"
+					return args
+				end,
+			},
+		},
+	},
 })
