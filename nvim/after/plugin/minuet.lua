@@ -118,6 +118,7 @@ require("minuet").setup({
 				max_tokens = 56,
 				-- top_p = 0.9,
 				top_p = 0.95,
+                temperature = 1.0,
 				-- disable thinking to avoid first token latency
 				-- thinking = { type = "enabled" },
 				thinking = { type = "enabled", clear_thinking = false },
