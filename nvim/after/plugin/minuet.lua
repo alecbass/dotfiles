@@ -120,6 +120,8 @@ require("minuet").setup({
 				top_p = 0.95,
 				-- disable thinking to avoid first token latency
 				-- thinking = { type = "enabled" },
+				thinking = { type = "enabled", clear_thinking = false },
+				reasoning_effort = "low",
 			},
 			-- Custom HTTP headers must go through `transform`; `optional` is request body only
 			transform = {
