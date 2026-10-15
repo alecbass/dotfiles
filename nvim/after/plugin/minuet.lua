@@ -115,7 +115,7 @@ require("minuet").setup({
 			-- model = "kimi-k2.7-code",
 			name = "Opencode",
 			optional = {
-				max_tokens = 255,
+				max_tokens = 1027,
 				-- top_p = 0.9,
 				top_p = 0.95,
                 temperature = 1.0,
